@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#f5f5f5] py-8 font-light text-[#111]">
       <Todos />
-      <Info name="Macailing, Ser Raineir Benedict U." />
+      <Info name="Ser Raineir Benedict U. Macailing" />
     </div>
   )
 }
