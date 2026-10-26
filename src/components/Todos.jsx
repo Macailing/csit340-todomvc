@@ -120,9 +120,20 @@ function Todos() {
               </button>
             </li>
           </ul>
-          <button type="button" className="cursor-pointer justify-self-end hover:underline">
+          {todos.filter((todo) => todo.completed).length > 0 && (
+          <>
+          <button
+            type="button"
+            onClick={() => {
+              setTodos(todos.filter((todo) => !todo.completed));
+              setCounter(todos.filter((todo) => !todo.completed).length);
+            }}
+            className="cursor-pointer justify-self-end hover:underline"
+          >
             Clear completed
           </button>
+          </>
+          )}
         </footer>
                   </>
         )}     
