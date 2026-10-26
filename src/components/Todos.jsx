@@ -2,10 +2,7 @@ import { useState } from 'react'
 
 function Todos() {
   const [text, setText] = useState('')
-   const [todos, setTodos] = useState([
-    { id: 1, text: 'Learn the spread operator', completed: false },
-    { id: 2, text: 'Set up Tailwind', completed: true },
-  ])
+   const [todos, setTodos] = useState([])
 
   
   function handleSubmit(e) {
@@ -47,6 +44,8 @@ function Todos() {
           />
         </form>
 
+        {todos.length > 0 && (
+          <>
         <main className="relative border-t border-[#e6e6e6]">
           <input id="toggle-all" type="checkbox" className="peer sr-only" />
           <label
@@ -121,7 +120,9 @@ function Todos() {
           <button type="button" className="cursor-pointer justify-self-end hover:underline">
             Clear completed
           </button>
-        </footer>        
+        </footer>
+                  </>
+        )}     
       </div>
     </section>
   )
